@@ -23,7 +23,7 @@
                         <td>{{$comic->type}}</td>
                         <td>{{$comic->price}}</td>
                         <td>
-                            <a href="" class="btn btn-outline-dark"><i class="bi bi-eyeglasses"></i></a>
+                            <a href="" class="btn btn-outline-dark"><i class="fa-solid fa-mask"></i></a>
                         </td>
                     </tr>
                 @endforeach
@@ -39,6 +39,6 @@
 
 <style>
     a i{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 </style>
