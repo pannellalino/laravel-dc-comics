@@ -1,17 +1,17 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="container text-center py-5">
+    <div class="container text-center py-5 text-light">
         <h1>Comics Dashboard</h1>
         <div class="table table-hover pt-5">
-            <table class="table table-hover">
+            <table class="table table-hover text-light">
                 <thead>
                   <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Title</th>
                     <th scope="col">Series</th>
-                    <th scope="col">Price</th>
                     <th scope="col">Type</th>
+                    <th scope="col">Price</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -23,22 +23,18 @@
                         <td>{{$comic->type}}</td>
                         <td>{{$comic->price}}</td>
                         <td>
-                            <a href="" class="btn btn-outline-dark"><i class="fa-solid fa-mask"></i></a>
+                            <a href="{{route('comics.show', $comic)}}" title="show" class="btn btn-outline-dark"><i class="fa-solid fa-mask text-light"></i></a>
                         </td>
                     </tr>
                 @endforeach
                 </tbody>
               </table>
             </div>
-            <div class="d-flex justify-content-center p-5">
+            <div class="d-flex justify-content-center p-2">
                 {{$comics->links()}}
+            </div>
+            <div>
+                <a href="{{route('comics.create')}}" class="btn btn-outline-light">Nuovo Comic</a>
             </div>
     </div>
 @endsection
-
-
-<style>
-    a i{
-        font-size: 1.2rem;
-    }
-</style>
