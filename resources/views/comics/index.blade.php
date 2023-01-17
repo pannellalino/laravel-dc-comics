@@ -25,7 +25,8 @@
                         <td>
                             <a href="{{route('comics.show', $comic)}}" title="show" class="btn btn-outline-success"><i class="fa-solid fa-mask text-light"></i></a>
                             <a href="{{route('comics.edit', $comic)}}" title="edit" class="btn btn-outline-warning"><i class="fa-solid fa-mask text-light"></i></a>
-                            <a href="{{route('comics.show', $comic)}}" title="show" class="btn btn-outline-danger"><i class="fa-solid fa-mask text-light"></i></a>
+                            {{-- <a href="{{route('comics.show', $comic)}}" title="show" class="btn btn-outline-danger"><i class="fa-solid fa-mask text-light"></i></a> --}}
+                            @include('partials.form-delete',['title'=>$comic->title, 'id'=>$comic->id])
                         </td>
                     </tr>
                 @endforeach
